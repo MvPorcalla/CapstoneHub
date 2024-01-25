@@ -1,0 +1,168 @@
+:root {
+    --bs-blue: #007bff;
+    --bs-indigo: #6610f2;
+    --bs-purple: #696cff;
+    --bs-pink: #e83e8c;
+    --bs-red: #ff3e1d;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffab00;
+    --bs-green: #71dd37;
+    --bs-teal: #20c997;
+    --bs-cyan: #03c3ec;
+    --bs-white: #fff;
+    --bs-gray: rgba(47, 95, 146, 0.6);
+    --bs-gray-dark: rgba(67, 89, 113, 0.8);
+    --bs-gray-25: rgba(67, 89, 113, 0.025);
+    --bs-gray-50: rgba(67, 89, 113, 0.05);
+    --bs-primary: #696cff;
+    --bs-secondary: #8592a3;
+    --bs-success: #71dd37;
+    --bs-info: #03c3ec;
+    --bs-warning: #ffab00;
+    --bs-danger: #ff3e1d;
+    --bs-light: #fcfdfd;
+    --bs-dark: #233446;
+    --bs-gray: rgba(67, 89, 113, 0.1);
+    --bs-primary-rgb: 105, 108, 255;
+    --bs-secondary-rgb: 133, 146, 163;
+    --bs-success-rgb: 113, 221, 55;
+    --bs-info-rgb: 3, 195, 236;
+    --bs-warning-rgb: 255, 171, 0;
+    --bs-danger-rgb: 255, 62, 29;
+    --bs-light-rgb: 252, 253, 253;
+    --bs-dark-rgb: 35, 52, 70;
+    --bs-gray-rgb: 67, 89, 113;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 67, 89, 113;
+    --bs-body-color-rgb: 105, 122, 141;
+    --bs-body-bg-rgb: 245, 245, 249;
+
+    --bs-font-sans-serif: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --bs-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+
+    --bs-root-font-size: 1rem;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 0.9375rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #697a8d;
+    --bs-body-bg: #f5f5f9;
+}
+
+:root {
+    font-size: var(--bs-root-font-size);
+}
+
+head {
+    display: none;
+}
+body {
+    color: var(--bs-black-rgb);
+    font-family:var(--bs-font-sans-serif);
+    line-height: var(--bs-body-line-height);
+    margin: 0;
+}
+
+.custom-bg {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #fdfd96);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.body-container h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.custom-bg {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #fdfd96);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.circle-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    max-height: 620px;
+    margin: auto;
+    background-color: var(--bs-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.pulse {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+}
+
+.pulse::before,
+.pulse::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(#0099CB, #FC924B);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: pulse 2s ease-out infinite;
+}
+
+.pulse::before {
+    animation-delay: 0s;
+}
+
+.pulse::after {
+    animation-delay: 1s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.form-check {
+    display: block;
+    min-height: 1.434375rem;
+    padding-left: 1.7em;
+    margin-bottom: 0.125rem;
+}
